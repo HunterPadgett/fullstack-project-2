@@ -1,0 +1,14 @@
+[
+  {
+    "blog_title": "BLOG POST ONE",
+    "blog_body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
+  },
+  {
+    "blog_title": "BLOG POST TWO",
+    "blog_body": "voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+  },
+  {
+    "blog_title": "BLOG POST THREE",
+    "blog_body": "est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non"
+  }
+]

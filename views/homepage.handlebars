@@ -1,0 +1,13 @@
+<!-- Loop over each object in the blogs array -->
+{{#each x as |x| }}
+<div class="row mb-4 border border-dark blog ">
+  <div class="col-md-5">
+    <h3 class="bg-dark text-white mb-0 p-1">
+      {{}} 
+    </h3>
+    <p class="bg-dark text-white p-1">Created by {{}} on {{}}</p>
+    <p>{{}}</p>
+    
+  </div>
+</div>
+{{/each}}
