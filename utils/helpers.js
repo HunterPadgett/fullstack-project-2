@@ -1,3 +1,5 @@
+// date and time helper if we need it
+
 module.exports = {
   format_time: (date) => {
     return date.toLocaleTimeString();
