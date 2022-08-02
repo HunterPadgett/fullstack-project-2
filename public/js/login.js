@@ -4,10 +4,10 @@
 const loginHandler = async (event) => {
   event.preventDefault();
 
-  const email = document.getElementById('email-login').value.trim();
+  const username = document.getElementById('user-login').value.trim();
   const password = document.getElementById('password-login').value.trim();
 
-  if (email && password) {
+  if (username && password) {
     const response = await fetch('/api/users/login', {
       method: 'POST',
       body: JSON.stringify({ email, password }),
