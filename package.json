@@ -6,6 +6,7 @@
     "express": "^4.18.1",
     "express-handlebars": "^6.0.6",
     "express-session": "^1.17.3",
+    "gridjs": "^5.0.2",
     "mysql2": "^2.3.3",
     "normalize.css": "^8.0.1",
     "sequelize": "^6.21.3"

@@ -1,17 +1,13 @@
 const router = require('express').Router();
-const { User } = require('../models');
+const { User, Char, Style } = require('../models');
+const withAuth = require('../utils/auth');
 
-router.get('/:id', async (req, res) => {
-  try {
-    const UserInfo = await User.findByPk(req.params.id);
+// router.get('/', async (req, res) => {
+//   try {
 
-    // TO convert my Sequelize object into a useable object
-    const serializedUserData = UserInfo.get({ plain: true });
-    console.log(serializedUserData);
-    res.render('home', serializedUserData);
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 
 module.exports = router;

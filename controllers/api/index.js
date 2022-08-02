@@ -1,12 +1,13 @@
 const router = require('express').Router();
 // any require for models routes go here
-const yRoutes = require('./yRoutes');
-const zRoutes = require('./zRoutes');
-const userRoutes = require('./zRoutes');
+const userRoutes = require('./userRoutes.js');
+const charRoutes = require('./charRoutes.js');
+const styleRoutes = require('./styleRoutes.js');
+
 
 router.use('/users', userRoutes);
-router.use('/y', yRoutes);
-router.use('/z', zRoutes);
+router.use('/char', charRoutes);
+router.use('/style', styleRoutes);
 
 
 module.exports = router;

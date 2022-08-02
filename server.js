@@ -14,7 +14,10 @@ const PORT = process.env.PORT || 3001;
 // Set up sessions with cookies
 const sess = {
   secret: 'Super secret secret',
-  cookie: {},
+  cookie: {
+    // 20 mins
+    maxAge: 1200000,
+  },
   resave: false,
   saveUninitialized: true,
   store: new SequelizeStore({
@@ -37,8 +40,5 @@ app.use(routes);
 
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () =>
-    console.log(
-      `\n listening on: http://localhost:${PORT}`
-    )
-  );
+    console.log(`\n listening on: http://localhost:${PORT}`));
 });
