@@ -1,56 +1,33 @@
-<div class="row" id="loginsignup">
-    <style>
-        #login {
-            position: absolute;
-            left: 35%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            border: 5px solid #000000;
-            padding: 10px;
-        }
-
-        #signup {
-            position: absolute;
-            left: 65%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            border: 5px solid #000000;
-            padding: 10px;
-        }
-    </style>
-<div class="row">
-    
-    <div class="col-md-6" id="login">
-      <h2 class="">Login</h2>
-      <form id="login-form">
-        <div class="form-group">
-          <label for="username-login">Username</label>
-          <input type="username" class="form-control" id="user-login" aria-describedby="emailHelp"
-            placeholder="Enter Username">
+<div class="container">
+    <div class="columns is-vertical-center is-centered" id="loginsignup">
+        <div class="column is-one-quarter has-background-light box mt-2 mx-2" id="login">
+            <h2 class="title">Login</h2>
+            <form id="login-form">
+                <div class="field">
+                    <label for="username-login">Username</label>
+                    <input type="username" class="input" id="user-login" placeholder="Enter Username">
+                </div>
+                <div class="field">
+                    <label for="password-login">Password</label>
+                    <input type="password" class="input" id="password-login" placeholder="Enter Password">
+                </div>
+                <button class="button is-black is-small" type="submit">Log in</button>
+            </form>
         </div>
-        <div class="form-group">
-          <label for="password-login">Password</label>
-          <input type="password" class="form-control" id="password-login" placeholder="Password">
+        <div class="column is-one-quarter has-background-light box mx-2" id="signup">
+            <h2 class="title">Signup</h2>
+            <form id="signup-form">
+                <div class="field">
+                    <label for="username-signup">Username</label>
+                    <input type="username" class="input" id="username-signup" placeholder="Create a Username">
+                </div>
+                <div class="field">
+                    <label for="password-signup">Password</label>
+                    <input type="password" class="input" id="password-signup" placeholder="Create a Password">
+                </div>
+                <button class="button is-black is-small" type="submit">Sign up</button>
+            </form>
         </div>
-  
-        <button type="submit" class="btn btn-dark mt-1">Log in</button>
-      </form>
     </div>
-    <div class="col-md-6" id="signup">
-      <h2 class="">Signup</h2>
-  
-      <form id="signup-form">
-        <div class="form-group">
-            <label for="username-signup">Username</label>
-            <input type="username" class="form-control" id="username-signup" placeholder="Username">
-        </div>
-        <div class="form-group">
-          <label for="password-signup">Password</label>
-          <input type="password" class="form-control" id="password-signup" placeholder="Password">
-        </div>
-        <button type="submit" class="btn btn-dark mt-1" type="submit">Sign up</button>
-      </form>
-    </div>
-  </div>
-  
-  <script src="./js/login.js"></script>
+</div>
+<script src="./js/login.js"></script>
