@@ -1,0 +1,23 @@
+* {
+  font-family: 'Audiowide', cursive;
+}
+
+#bgImg {
+  background-image: url(./pics/7481714.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 0;
+  position: fixed;
+  max-height: 100vh;
+  width:fit-content;
+}  
+
+#spaceBoss {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 600px;
+}
+
