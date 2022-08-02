@@ -26,35 +26,18 @@
         <div class="navbar-item">
           {{#if loggin_in}}
           <div class="buttons">
-            <a class="button is-primary">
-              <strong>Home</strong>
-            </a>
-            <a class="button is-primary">
+            <a href="/charSelect" class="button is-primary">
               <strong>Select Character</strong>
             </a>
             <a class="button is-primary">
               <strong>Logout</strong>
             </a>
-            {{else}}
-            <div class="buttons">
-              <a class="button is-primary">
-                <strong>Home</strong>
-              </a>
-              <a class="button is-primary">
-                <strong>Select Character</strong>
-              </a>
-              <a class="button is-primary">
-                <strong>Logout</strong>
-              </a>
             {{/if}}  
           </div>
         </div>
       </div>
     </div>
   </nav>
-
-  <img id="bgImg" src="./pics/7481714.jpg" alt="space background">
-  <img id="spaceBoss" src="./pics/cthulhu.png" alt="boss">
 
   <main class="container container-fluid mt-5">
     <!-- Render the sub layout -->
