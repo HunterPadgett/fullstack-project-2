@@ -16,7 +16,7 @@ const loginHandler = async (event) => {
 
     if (response.ok) {
       // If successful, redirect the browser to the profile page
-      document.location.replace('/profile');
+      document.location.replace('/charSelect');
     } else {
       alert('Incorrect username or password');
     }
@@ -37,7 +37,7 @@ const signupHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace('/profile');
+      document.location.replace('/charSelect');
     } else {
       alert(response.statusText);
     }
