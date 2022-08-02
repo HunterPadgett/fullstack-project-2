@@ -8,7 +8,7 @@ Style.init(
     id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
-      autoIncrement: true
+      autoIncrement: false
     },
     user_id: {
       type: DataTypes.INTEGER,
@@ -30,7 +30,7 @@ Style.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'char',
+    modelName: 'style',
   }
 );
 

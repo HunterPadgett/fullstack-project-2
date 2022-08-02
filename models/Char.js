@@ -7,13 +7,25 @@ Char.init(
   {
     id: {
       type: DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true
+    },
+    style_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'style',
+        key: 'id',
+      },
+
+    },
+    user_id: {
+      type: DataTypes.INTEGER,
       references: {
         model: 'user',
         key: 'id',
       },
-      primaryKey: true,
-      autoIncrement: true
-    },
+
+    }
   },
   {
     sequelize,
