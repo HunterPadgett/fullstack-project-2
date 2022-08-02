@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-  <link rel="stylesheet" href="../../public/css/style.css">
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
 
@@ -26,6 +26,9 @@
         <div class="navbar-item">
           {{#if loggin_in}}
           <div class="buttons">
+            <a href="/home" class="button is-primary">
+              <strong>Home</strong>
+            </a>
             <a href="/charSelect" class="button is-primary">
               <strong>Select Character</strong>
             </a>
@@ -38,15 +41,8 @@
       </div>
     </div>
   </nav>
-
-  <main class="container container-fluid mt-5">
     <!-- Render the sub layout -->
     {{{ body }}}
-  </main>
-  <footer>
-
-  </footer>
-
   <!-- Render script for logged in users only -->
   {{#if logged_in}}
   <script src="/js/logout.js"></script>

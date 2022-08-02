@@ -2,18 +2,20 @@
   font-family: 'Audiowide', cursive;
 }
 
-#bgImg {
-  background-image: url(./pics/7481714.jpg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  z-index: 0;
-  position: fixed;
-  max-height: 100vh;
-  width:fit-content;
-}  
+/* HOME HANDLEBARS STYLING */
 
-#spaceBoss {
+#bgImgHome {
+  max-height: 100vh;
+  min-width: 1024px;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+}
+
+#spaceBossHome {
   position: absolute;
   top: 65%;
   left: 50%;
@@ -21,3 +23,28 @@
   height: 600px;
 }
 
+
+#loginBtnHome {
+  position: absolute;
+  top: 23%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(0, 0, 0);
+  /* color: black; */
+  border: none;
+  border-radius: 30px;
+  font-size: 50px;
+  height: 145px;
+  width: 260px;
+  letter-spacing: 1px;
+}
+
+#loginBtnHome:hover {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  transition: 0.2s;
+  cursor: pointer;
+  height: 150px;
+  width: 270px;
+  letter-spacing: 8px;
+}
