@@ -16,16 +16,68 @@ router.post('/', async (req, res) => {
   }
 });
 
-// This is simply used as a demonstration URL to see if data can be retrieved from the database. You DO NOT need this for your application most of the time.
-// /api/user/userInfo/:id     FROM JUNGS DEMO
+router.post('/login', async (req, res) => {
+  try {
+    const userData = await User.findOne({
+      where: { username: req.body.username },
+    });
+
+    if (!userData) {
+      res
+        .status(400)
+        .json({ message: 'Incorrect username or password, please try again' });
+      return;
+    }
+
+    const validPassword = await userData.checkPassword(req.body.password);
+
+    if (!validPassword) {
+      res
+        .status(400)
+        .json({ message: 'Incorrect username or password, please try again' });
+      return;
+    }
+
+    req.session.save(() => {
+      req.session.user_id = userData.id;
+      req.session.logged_in = true;
+
+      res.json({ user: userData, message: 'You are now logged in!' });
+    });
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
+
+router.post('/logout', (req, res) => {
+  if (req.session.logged_in) {
+    req.session.destroy(() => {
+      res.status(204).end();
+    });
+  } else {
+    res.status(404).end();
+  }
+});
+
+// /api/user/userInfo/:id for showing a specific user in insomnia
 router.get('/userInfo/:id', async (req, res) => {
   try {
     const UserInfo = await User.findByPk(req.params.id);
+
+    res.status(200).json(UserInfo);
+    console.log(req.session.logged_in);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get('/userInfo', async (req, res) => {
+  try {
+    const UserInfo = await User.findAll(req.body);
 
     res.status(200).json(UserInfo);
   } catch (err) {
     res.status(500).json(err);
   }
 });
-
 module.exports = router;
