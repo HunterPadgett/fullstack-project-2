@@ -24,7 +24,6 @@ Char.init(
         model: 'user',
         key: 'id',
       },
-
     }
   },
   {
