@@ -1,22 +1,33 @@
-<div class="row" id="loginsignup">
+<head>
     <style>
-        #loginsignup {
+        #login {
             position: absolute;
-            left: 50%;
+            left: 35%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border: 5px solid #000000;
+            padding: 10px;
+        }
+
+        #signup {
+            position: absolute;
+            left: 65%;
             top: 50%;
             transform: translate(-50%, -50%);
             border: 5px solid #000000;
             padding: 10px;
         }
     </style>
+</head>
+<div class="row">
+    
     <div class="col-md-6" id="login">
       <h2 class="">Login</h2>
-  
       <form id="login-form">
         <div class="form-group">
           <label for="username-login">Username</label>
           <input type="username" class="form-control" id="user-login" aria-describedby="emailHelp"
-            placeholder="Enter email">
+            placeholder="Enter Username">
         </div>
         <div class="form-group">
           <label for="password-login">Password</label>
@@ -30,10 +41,6 @@
       <h2 class="">Signup</h2>
   
       <form id="signup-form">
-        <div class="form-group">
-          <label for="name-signup">Name</label>
-          <input type="name" class="form-control" id="name-signup" placeholder="Name">
-        </div>
         <div class="form-group">
             <label for="username-signup">Username</label>
             <input type="username" class="form-control" id="username-signup" placeholder="Username">
