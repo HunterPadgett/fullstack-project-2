@@ -38,6 +38,14 @@ User.init(
         len: [6],
       },
     },
+    wins: {
+      type: DataTypes.INTEGER,
+      defaultValue: 0
+    },
+    losses: {
+      type: DataTypes.INTEGER,
+      defaultValue: 0
+    }
   },
   {
     hooks: {

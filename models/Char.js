@@ -11,6 +11,8 @@ Char.init(
         model: 'user',
         key: 'id',
       },
+      primaryKey: true,
+      autoIncrement: true
     },
   },
   {
