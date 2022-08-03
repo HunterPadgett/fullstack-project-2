@@ -1,0 +1,14 @@
+[
+  {
+    "char_image": "/images/mario.png",
+    "char_name": "beavis"
+  },
+  {
+    "char_image": "/images/pika.png",
+    "char_name": "butthead"
+  },
+  {
+    "char_image": "/images/link.png",
+    "char_name": "rocky"
+  }
+]

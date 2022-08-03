@@ -1,0 +1,78 @@
+<img id="bgImgFight" src="/images/45908.jpg" alt="space" />
+
+<div id="container">
+  <!-- title container -->
+  <div id="topText" class="has-background-dark">
+    <h1
+      id="title"
+      class="title is-2 has-background-dark has-text-white has-text-centered p-3"
+    >Defeat Lord Cthulhu to Save the World!</h1>
+    <!-- <p id="subtitle" class="has-background-dark has-text-white has-text-centered">Defeat Lord Cthulhu to Save the World</p> -->
+  </div>
+
+  <!-- container for everything other than the title -->
+  <div id="top" class="columns">
+
+    <!-- health bar and attcks for user -->
+    <div id="charStats" class="column is-2 stats">
+      <span id="statArea" class="hp has-text-centered has-text-white">
+        CHARACTERS NAME
+      </span><br />
+      <div class="hpBorder">
+        <div id="charHP" class="hpBar"></div>
+      </div>
+      <span
+        id="instructions"
+        class="hp has-text-centered has-text-white"
+      ></span><br />
+      <span
+        id="charMoves"
+        class="hp has-text-centered has-text-white"
+      >MOVES</span><br />
+      <button type="click" value="click" id="strongAttackBtn" class="btn">STRONG
+        ATTACK</button>
+      <button type="click" value="click" id="preAttackBtn" class="btn">PRECISION
+        ATTACK</button>
+      <!-- <button type="click" value="click" id="defendBtn" class="btn">DEFEND</button> -->
+      <button type="click" value="click" id="specAttackBtn" class="btn">SPECIAL
+        ATTACK</button>
+    </div>
+
+    <!-- user character -->
+    <div id="character" class="column is-3">
+      <img id="charImg" src="/images/mario.png" alt="pikachu" />
+    </div>
+
+    <!-- boss character -->
+    <div id="boss" class="column is-5">
+      <img id="bossImg" src="/images/cthulhu.png" alt="boss" />
+    </div>
+
+    <!-- boss health bar -->
+    <div id="bossStats" class="column is-2 stats">
+      <span id="statArea" class="hp has-text-centered has-text-white">
+        LORD CTHULHU HEALTH
+      </span><br />
+      <div class="hpBorder">
+        <div id="bossHP" class="hpBar"></div>
+      </div>
+      <span
+        id="bossInstructions"
+        class="hp has-text-centered has-text-white"
+      ></span><br />
+    </div>
+
+  </div>
+</div>
+
+<!-- big start fight button before game environment loads -->
+<button type="click" value="click" id="floating-btn" class="floating-btn">START
+  FIGHT</button>
+
+<button type="click" value="click" id="playAgainBtn" class="floating-btn">PLAY
+  AGAIN?</button>
+
+<button type="click" value="click" id="newCharBtn" class="floating-btn">SELECT
+  NEW CHARACTER</button>
+
+<script src="./js/plumberFight.js"></script>
