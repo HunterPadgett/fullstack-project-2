@@ -140,3 +140,16 @@
   width: 290px;
   letter-spacing: 6px;
 }
+
+
+/* PROFILE STYLING */
+
+#bgImgProfile {
+  max-height: 100vh;
+  min-width: 1024px;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
