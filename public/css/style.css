@@ -71,7 +71,6 @@
   transform: translate(-50%, -50%);
 }
 
-
 /* CHARSELECT STYLING */
 
 #bgImgCharSel {
@@ -141,7 +140,6 @@
   letter-spacing: 6px;
 }
 
-
 /* PROFILE STYLING */
 
 #bgImgProfile {
@@ -152,4 +150,211 @@
   position: fixed;
   top: 0;
   left: 0;
+}
+
+/* FIGHT PAGE STYLING */
+
+#bgImgFight {
+  max-height: 100vh;
+  min-width: 1024px;
+  width: 100%;
+  height: auto;
+  /* position: fixed; */
+  top: 0;
+  left: 0;
+}
+
+#container {
+  backdrop-filter: blur(10px);
+}
+
+#top {
+  /* border: 1px solid; */
+  /* border-color: red; */
+  justify-content: center;
+  /* padding-top: 8.3rem; */
+  height: 55rem;
+  /* align-items: baseline; */
+}
+
+#character {
+  /* border: 1px solid; */
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  /* margin-bottom: 1rem; */
+  /* object-position: 0px 20px; */
+}
+
+#character img {
+  height: 200px;
+  /* margin-bottom: 2.5rem; */
+  padding-bottom: 2.5rem;
+  opacity: 0%;
+  /* transform: translateX(-15px); */
+}
+
+#boss {
+  /* border: 1px solid; */
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+#boss img {
+  height: 650px;
+  margin-bottom: 2rem;
+  opacity: 0%;
+}
+
+#title {
+  padding-top: 1rem;
+}
+
+.stats {
+  width: 200px;
+  /* border: 1px solid; */
+  /* border-color: blue; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  visibility: hidden;
+}
+
+.hp {
+  font-weight: bold;
+  margin-top: 1rem;
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.7);
+  /* padding-left: 2px; */
+}
+
+.hpBorder {
+  width: 250px;
+  height: 30px;
+  border: 3px solid;
+  border-color: black;
+  background-color: red;
+}
+
+.hpBar {
+  width: 244px;
+  height: 24px;
+  background-color: rgb(43, 192, 43);
+  justify-content: center;
+}
+
+.btn {
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 4px;
+  font-family: "Audiowide", cursive;
+}
+
+.btn:hover {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  transition: 0.2s;
+  cursor: pointer;
+  height: 30px;
+  width: 140px;
+  letter-spacing: 1px;
+}
+
+#strongAttackBtn {
+  width: 170px;
+}
+
+#strongAttackBtn:hover {
+  width: 180px;
+  letter-spacing: 1.4px;
+}
+
+#specAttackBtn {
+  visibility: hidden;
+}
+
+#preAttackBtn {
+  width: 170px;
+}
+
+#preAttackBtn:hover {
+  width: 182px;
+}
+
+#specAttackBtn:hover {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  transition: 0.2s;
+  cursor: pointer;
+  height: 30px;
+  width: 160px;
+  letter-spacing: 1px;
+}
+
+.floating-btn {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 10px;
+  padding: 5px;
+  font-family: "Audiowide", cursive;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  position: fixed;
+  font-size: 27px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 60px;
+  width: 280px;
+}
+
+.floating-btn:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 118, 139);
+  transition: 0.2s;
+  cursor: pointer;
+  font-size: 30px;
+  height: 60px;
+  width: 300px;
+  letter-spacing: 3px;
+  backdrop-filter: blur(50px);
+  box-shadow: 2px 4px 3px rgba(0, 0, 0, 0.8);
+}
+
+#playAgainBtn {
+  visibility: hidden;
+  top: 30%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+}
+
+#newCharBtn {
+  visibility: hidden;
+  top: 30%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  height: 63px;
+}
+
+#newCharBtn:hover {
+  height: 69px;
+}
+
+#bossInstructions {
+  padding: 2px;
+}
+
+#instructions {
+  padding: 2px;
+}
+
+#statArea {
+  padding: 2px;
 }
