@@ -1,24 +1,27 @@
-formControlCheckbox = [...document.querySelectorAll(".form-control-checkbox")];
-
-formControlCheckbox.forEach((oneByone) => {
-  oneByone.addEventListener('click', function () {
-    formControlCheckbox.forEach((oneByone) => {
-      oneByone.checked = false;
-    });
-    oneByone.checked = true;
-  });
-});
-const fighterHandler = async (event) => {
+const assassinHandler = async (event) => {
   event.preventDefault();
-
+  const fighterImage = "/images/pika.png";
   const fighterName = document.getElementById("charNameInput").value.trim();
-  console.log(fighterName);
+  console.log(`${fighterName} ${fighterImage}`);
 
-  document.location.replace("/profile");
+  // document.location.replace("/profile");
+};
+const allrounderHandler = async (event) => {
+  event.preventDefault();
+  const fighterImage = '/images/mario.png';
+  const fighterName = document.getElementById("charNameInput").value.trim();
+  await console.log(fighterImage);
+
+  // document.location.replace("/profile");
+};
+const tankyboiHandler = async (event) => {
+  event.preventDefault();
+  const fighterImage = "/images/link.png";
+  const fighterName = document.getElementById("charNameInput").value.trim();
+  console.log(`${fighterName} ${fighterImage}`);
+  // document.location.replace("/profile");
 };
 
-document
-  .getElementById("create-character")
-  .addEventListener("click", fighterHandler);
-
-formControlCheckbox = [...document.querySelectorAll(".form-control-checkbox")];
+document.getElementById("tankyboi").addEventListener("click", assassinHandler);
+document.getElementById("allrounder").addEventListener("click", allrounderHandler);
+document.getElementById("assassin").addEventListener("click", tankyboiHandler);
