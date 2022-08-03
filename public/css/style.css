@@ -1,5 +1,5 @@
 * {
-  font-family: 'Audiowide', cursive;
+  font-family: "Audiowide", cursive;
 }
 
 /* HOME HANDLEBARS STYLING */
@@ -12,7 +12,6 @@
   position: fixed;
   top: 0;
   left: 0;
-
 }
 
 #spaceBossHome {
@@ -22,7 +21,6 @@
   transform: translate(-50%, -50%);
   height: 600px;
 }
-
 
 #loginBtnHome {
   position: absolute;
@@ -47,4 +45,20 @@
   height: 150px;
   width: 270px;
   letter-spacing: 8px;
+}
+
+/* LOGIN HANDLEBARS STYLING */
+
+#bgImgLogin {
+  max-height: 100vh;
+  min-width: 1024px;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#containerLogin {
+  padding-top: 16rem;
 }

@@ -14,14 +14,14 @@ Style.init(
       type: DataTypes.INTEGER,
       references: {
         model: 'user',
-        key: 'id',
+        key: 'id'
       }
     },
     char_id: {
       type: DataTypes.INTEGER,
       references: {
         model: 'char',
-        key: 'id',
+        key: 'id'
       }
     }
   },
@@ -30,10 +30,8 @@ Style.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'style',
+    modelName: 'style'
   }
 );
-
-
 
 module.exports = Style;

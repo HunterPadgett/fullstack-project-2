@@ -14,31 +14,31 @@ User.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
-      autoIncrement: true,
+      autoIncrement: true
     },
     username: {
       type: DataTypes.STRING,
       allowNull: false,
       unique: true,
       validate: {
-        isAlphanumeric: true,
-      },
+        isAlphanumeric: true
+      }
     },
     password: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [6],
-      },
+        len: [6]
+      }
     },
     wins: {
       type: DataTypes.INTEGER,
-      defaultValue: 0,
+      defaultValue: 0
     },
     losses: {
       type: DataTypes.INTEGER,
-      defaultValue: 0,
-    },
+      defaultValue: 0
+    }
   },
   {
     hooks: {
@@ -52,13 +52,13 @@ User.init(
           10
         );
         return updatedUserData;
-      },
+      }
     },
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'user',
+    modelName: 'user'
   }
 );
 

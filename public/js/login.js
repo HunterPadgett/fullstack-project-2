@@ -1,6 +1,5 @@
 // login signup logic we can edit to our signup login page
 
-
 const loginHandler = async (event) => {
   event.preventDefault();
 
@@ -11,7 +10,7 @@ const loginHandler = async (event) => {
     const response = await fetch('/api/users/login', {
       method: 'POST',
       body: JSON.stringify({ username, password }),
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 'Content-Type': 'application/json' }
     });
 
     if (response.ok) {
@@ -33,7 +32,7 @@ const signupHandler = async (event) => {
     const response = await fetch('/api/users', {
       method: 'POST',
       body: JSON.stringify({ username, password }),
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 'Content-Type': 'application/json' }
     });
 
     if (response.ok) {
@@ -44,9 +43,7 @@ const signupHandler = async (event) => {
   }
 };
 
-document
-  .getElementById('login-form')
-  .addEventListener('submit', loginHandler);
+document.getElementById('login-form').addEventListener('submit', loginHandler);
 
 document
   .getElementById('signup-form')

@@ -14,16 +14,15 @@ Char.init(
       type: DataTypes.INTEGER,
       references: {
         model: 'style',
-        key: 'id',
-      },
-
+        key: 'id'
+      }
     },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
         model: 'user',
-        key: 'id',
-      },
+        key: 'id'
+      }
     }
   },
   {
@@ -31,7 +30,7 @@ Char.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'char',
+    modelName: 'char'
   }
 );
 
