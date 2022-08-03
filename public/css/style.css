@@ -62,3 +62,47 @@
 #containerLogin {
   padding-top: 16rem;
 }
+
+/* CHARSELECT STYLING */
+
+#bgImgCharSel {
+  max-height: 100vh;
+  min-width: 1024px;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  /* z-index: 0; */
+  top: 0;
+  left: 0;
+}
+
+#containerCharSel,
+#nameConCharSelec {
+  /* background-color: black; */
+  padding: 1rem;
+}
+
+#checkbox-1,
+#checkbox-2,
+#checkbox-3 {
+  width: 25px;
+  height: 25px;
+}
+
+#nameConCharSelec {
+  padding-top: 7rem;
+}
+
+#yellowRat,
+#italianPlumber,
+#greenWarrior {
+  /* min-height: 150px; */
+  max-height: 150px;
+}
+
+#p1,
+#p2,
+#p3 {
+  display: flex;
+  justify-content: baseline;
+}
