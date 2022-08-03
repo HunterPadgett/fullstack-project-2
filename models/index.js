@@ -3,7 +3,7 @@ const Char = require('./Char');
 const Style = require('./Style');
 
 User.hasOne(Char, {
-  foreignKey: 'char_id',
+  foreignKey: 'user_id',
   onDelete: 'CASCADE'
 });
 
@@ -12,7 +12,7 @@ Char.belongsTo(User, {
 });
 
 Char.hasOne(Style, {
-  foreignKey: 'style_id',
+  foreignKey: 'char_id',
   onDelete: 'CASCADE'
 });
 

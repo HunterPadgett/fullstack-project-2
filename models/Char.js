@@ -10,6 +10,10 @@ Char.init(
       primaryKey: true,
       autoIncrement: true
     },
+    char_name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     style_id: {
       type: DataTypes.INTEGER,
       references: {
