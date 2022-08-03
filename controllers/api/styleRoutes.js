@@ -1,4 +1,4 @@
 const router = require('express').Router();
-const { User, Char, Style } = require('../../models');
+const { User, Fighter, Style } = require('../../models');
 
 module.exports = router;

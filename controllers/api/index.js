@@ -5,7 +5,7 @@ const charRoutes = require('./charRoutes.js');
 const styleRoutes = require('./styleRoutes.js');
 
 router.use('/users', userRoutes);
-router.use('/char', charRoutes);
+router.use('/fighter', charRoutes);
 router.use('/style', styleRoutes);
 
 module.exports = router;
