@@ -4,20 +4,20 @@ const Style = require('./Style');
 
 User.hasOne(Char, {
   foreignKey: 'char_id',
-  onDelete: 'CASCADE',
+  onDelete: 'CASCADE'
 });
 
 Char.belongsTo(User, {
-  foreignKey: 'user_id',
+  foreignKey: 'user_id'
 });
 
 Char.hasOne(Style, {
   foreignKey: 'style_id',
-  onDelete: 'CASCADE',
+  onDelete: 'CASCADE'
 });
 
 Style.belongsTo(Char, {
-  foreignKey: 'char_id',
+  foreignKey: 'char_id'
 });
 
 module.exports = { User, Char, Style };
