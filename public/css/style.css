@@ -22,7 +22,7 @@
   height: 600px;
 }
 
-#loginBtnHome {
+#create-character {
   position: absolute;
   top: 23%;
   left: 50%;
@@ -37,7 +37,7 @@
   letter-spacing: 1px;
 }
 
-#loginBtnHome:hover {
+#create-character:hover {
   background-color: rgb(0, 0, 0);
   color: white;
   transition: 0.2s;
@@ -105,4 +105,29 @@
 #p3 {
   display: flex;
   justify-content: baseline;
+}
+
+#create-character {
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(66, 59, 59);
+  /* color: black; */
+  border: none;
+  border-radius: 30px;
+  font-size: 40px;
+  height: 90px;
+  width: 260px;
+  letter-spacing: 1px;
+}
+
+#create-character:hover {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  transition: 0.2s;
+  cursor: pointer;
+  height: 95px;
+  width: 290px;
+  letter-spacing: 6px;
 }
