@@ -7,9 +7,7 @@ router.get('/', async (req, res) => {
   // find all categories ✅
   // be sure to include its associated Products ✅
   try {
-    const fighterData = await Fighter.findAll({
-      include: User
-    });
+    const fighterData = await Fighter.findOne({ where: { user_id: req.body.user_id } });
     res.status(200).json(fighterData);
   } catch (err) {
     res.status(500).json(err);
