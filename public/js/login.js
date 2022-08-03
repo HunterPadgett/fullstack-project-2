@@ -3,7 +3,7 @@
 const loginHandler = async (event) => {
   event.preventDefault();
 
-  const username = document.getElementById('username-login').value.trim();
+  const username = document.getElementById('user-login').value.trim();
   const password = document.getElementById('password-login').value.trim();
 
   if (username && password) {
