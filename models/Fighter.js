@@ -10,20 +10,13 @@ Fighter.init(
       primaryKey: true,
       autoIncrement: true
     },
-    char_image: {
+    fighter_image: {
       type: DataTypes.STRING,
       allowNull: false
     },
-    char_name: {
+    fighter_name: {
       type: DataTypes.STRING,
       allowNull: true
-    },
-    style_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'style',
-        key: 'id'
-      }
     },
     user_id: {
       type: DataTypes.INTEGER,
