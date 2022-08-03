@@ -23,7 +23,7 @@ router.get('/charSelect', withAuth, async (req, res) => {
       attributes: { exclude: ['password'] },
     });
     const user = userData.get({ plain: true });
-    res.render('profile', {
+    res.render('charSelect', {
       ...user,
       logged_in: true
     });
