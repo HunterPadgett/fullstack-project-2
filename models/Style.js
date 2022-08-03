@@ -20,7 +20,7 @@ Style.init(
     char_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'char',
+        model: 'fighter',
         key: 'id'
       }
     }
