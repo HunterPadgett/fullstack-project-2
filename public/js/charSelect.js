@@ -1,8 +1,7 @@
-
 const assassinHandler = async (event) => {
   event.preventDefault();
-  const fighter_image = "/images/pika.png";
-  const fighter_name = document.getElementById("charNameInput").value.trim();
+  const fighter_image = '/images/pika.png';
+  const fighter_name = document.getElementById('charNameInput').value.trim();
   console.log(`${fighter_name} ${fighter_image}`);
   if (fighter_name) {
     const response = await fetch('/api/fighter', {
@@ -23,7 +22,7 @@ const assassinHandler = async (event) => {
 const allrounderHandler = async (event) => {
   event.preventDefault();
   const fighter_image = '/images/mario.png';
-  const fighter_name = document.getElementById("charNameInput").value.trim();
+  const fighter_name = document.getElementById('charNameInput').value.trim();
   await console.log(fighter_image);
 
   if (fighter_name) {
@@ -40,12 +39,11 @@ const allrounderHandler = async (event) => {
       alert('You must enter a Fighter name');
     }
   }
-
 };
 const tankyboiHandler = async (event) => {
   event.preventDefault();
-  const fighter_image = "/images/link.png";
-  const fighter_name = document.getElementById("charNameInput").value.trim();
+  const fighter_image = '/images/link.png';
+  const fighter_name = document.getElementById('charNameInput').value.trim();
   // console.log(`${fighter_name} ${fighter_image}`);
   if (fighter_name) {
     const response = await fetch('/api/fighter', {
@@ -63,6 +61,9 @@ const tankyboiHandler = async (event) => {
   }
 };
 
-document.getElementById("assassin").addEventListener("click", assassinHandler);
-document.getElementById("allrounder").addEventListener("click", allrounderHandler);
-document.getElementById("tankyboi").addEventListener("click", tankyboiHandler);
+document.getElementById('assassin').addEventListener('click', assassinHandler);
+document
+  .getElementById('allrounder')
+  .addEventListener('click', allrounderHandler);
+document.getElementById('tankyboi').addEventListener('click', tankyboiHandler);
+
