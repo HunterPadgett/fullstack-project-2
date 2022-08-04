@@ -14,7 +14,7 @@ const loginHandler = async (event) => {
     });
 
     if (response.ok) {
-      // If successful, redirect the browser to the profile page
+      // If successful, redirect the browser to the charselect page
       document.location.replace('/charSelect');
     } else {
       alert('Incorrect username or password');
