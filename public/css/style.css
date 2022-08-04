@@ -232,12 +232,23 @@
   max-height: 200px;
 }
 
+#winLoss {
+}
+
 #proContain {
   padding-top: 3rem;
 }
 
 #charNamePro {
-  font-size: 45px;
+  font-size: 50px;
+}
+
+#winz {
+  font-size: 40px;
+}
+
+#lossez {
+  font-size: 40px;
 }
 
 .statsProfile {
@@ -265,12 +276,13 @@
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  position: fixed;
   font-size: 26px;
-  /* position: fixed; */
+  /* position: relative;
+  font-size: 26px;
+  position: fixed;
   top: 43%;
-  /* left: 50%; */
-  transform: translate(-50%, -50%);
+  left: 50%;
+  transform: translate(-50%, -50%); */
   height: 65px;
   width: 180px;
 }
@@ -284,7 +296,7 @@
   height: 60px;
   width: 200px;
   letter-spacing: 8px;
-  /* backdrop-filter: blur(50px); */
+  backdrop-filter: blur(50px);
   box-shadow: 2px 4px 3px rgba(0, 0, 0, 0.8);
 }
 
