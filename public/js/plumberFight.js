@@ -71,7 +71,7 @@ async function bossAttacks() {
       instructions.innerHTML += '<br>Special Attack Charged!';
     }
     // changing the title to display if user won. hiding attack buttons so user can no longer attack once someone's health bar reaches 0
-    if (charHealthBar == 0) {
+    if (charHealthBar === 0) {
       mainNavtitle.innerHTML =
           'OH NO, GAME OVER! LORD CTHULHU HAS DEFEATED YOU!';
       mainNavtitle.style.fontSize = '42px';
@@ -115,7 +115,7 @@ async function bossAttacks() {
       instructions.innerHTML += '<br>Special Attack Charged!';
     }
     // changing the title to display if user won. hiding attack buttons so user can no longer attack once someone's health bar reaches 0
-    if (charHealthBar == 0) {
+    if (charHealthBar === 0) {
       mainNavtitle.innerHTML =
           'OH NO, GAME OVER! LORD CTHULHU HAS DEFEATED YOU!';
       mainNavtitle.style.fontSize = '42px';
@@ -159,7 +159,7 @@ async function bossAttacks() {
       instructions.innerHTML += '<br>Special Attack Charged!';
     }
     // changing the title to display if user won. hiding attack buttons so user can no longer attack once someone's health bar reaches 0
-    if (charHealthBar == 0) {
+    if (charHealthBar === 0) {
       mainNavtitle.innerHTML =
           'OH NO, GAME OVER! LORD CTHULHU HAS DEFEATED YOU!';
       mainNavtitle.style.fontSize = '42px';
@@ -202,7 +202,7 @@ async function sAttack() {
   }
 
   // changing the title to display if user won. hiding attack buttons so user can no longer attack once someone's health bar reaches 0
-  if (bossHealthBar == 0) {
+  if (bossHealthBar === 0) {
     mainNavtitle.innerHTML = 'YOU WIN! YOU HAVE DEFEATED LORD CTHULHU!';
     mainNavtitle.style.fontSize = '42px';
     strongAttack.style.visibility = 'hidden';
@@ -242,7 +242,7 @@ async function pAttack() {
   }
 
   // changing the title to display if user won. hiding attack buttons so user can no longer attack once someone's health bar reaches 0
-  if (bossHealthBar == 0) {
+  if (bossHealthBar === 0) {
     mainNavtitle.innerHTML = 'YOU WIN! YOU HAVE DEFEATED LORD CTHULHU!';
     mainNavtitle.style.fontSize = '42px';
     strongAttack.style.visibility = 'hidden';
@@ -282,7 +282,8 @@ async function speAttack() {
   }
 
   // changing the title to display if user won. hiding attack buttons so user can no longer attack once someone's health bar reaches 0
-  if (bossHealthBar == 0) {
+  if (bossHealthBar === 0) {
+    console.log('dub');
     mainNavtitle.innerHTML = 'YOU WIN! YOU HAVE DEFEATED LORD CTHULHU!';
     mainNavtitle.style.fontSize = '42px';
     strongAttack.style.visibility = 'hidden';
