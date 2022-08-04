@@ -228,6 +228,66 @@
   left: 0;
 }
 
+#charImgPro {
+  max-height: 200px;
+}
+
+#proContain {
+  padding-top: 10rem;
+}
+
+#charNamePro {
+  font-size: 45px;
+}
+
+.statsProfile {
+  font-size: 30px;
+}
+
+/* .contain {
+  height: 50vh;
+}
+
+.chartWrapper {
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+} */
+
+.floating-btn-profile {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 10px;
+  /* padding: 5px; */
+  font-family: "Audiowide", cursive;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  position: fixed;
+  font-size: 26px;
+  /* position: fixed; */
+  top: 43%;
+  /* left: 50%; */
+  transform: translate(-50%, -50%);
+  height: 65px;
+  width: 180px;
+}
+
+.floating-btn-profile:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 118, 139);
+  transition: 0.2s;
+  cursor: pointer;
+  font-size: 30px;
+  height: 60px;
+  width: 200px;
+  letter-spacing: 8px;
+  /* backdrop-filter: blur(50px); */
+  box-shadow: 2px 4px 3px rgba(0, 0, 0, 0.8);
+}
+
 @media (max-width: 1265px) {
   #bgImgProfile {
     max-height: 100vh;

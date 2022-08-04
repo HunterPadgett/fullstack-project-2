@@ -1,55 +1,32 @@
-<img id="bgImgProfile" src="/images/7481714.jpg" alt="space" />
+<img id="bgImgProfile" src="/images/45908.jpg" alt="space" />
 
-<div class="container">
-  {{fighter.fighter_name}}
-  <img src="{{fighter.fighter_image}}" alt="">
-  <section>
-    <div class="style-fight-button">
-      <button class="fight-button" id="fight-button">FIGHT!</button>
-    </div>
-  </section>
+<div id="proContain" class="container is-centered">
 
-  <section>
-    <div class="yellowRat-image">
-      <img
-        id="yellowRat-image2"
-        src="not-found.png"
-        alt="placeholder image"
-        width="200"
-        height="200"
-      />
+  <div
+    class="has-background-dark is-flex is-justify-content-space-between has-text-light is-align-content-center is-flex-wrap-wrap"
+  >
+    <div class="has-text-centered has-background-dark p-2">
+      <p id="charNamePro">{{fighter.fighter_name}}</p>
+      <img id="charImgPro" src="{{fighter.fighter_image}}" alt="" />
     </div>
 
-    <div class="italianPlumber-image">
-      <img
-        id="italianPlumber-image2"
-        src="not-found.png"
-        alt="placeholder image"
-        width="200"
-        height="200"
-      />
+    <div class="has-background-dark">
+      <div class="style-fight-button">
+        <button
+          class="floating-btn-profile has-text-primary"
+          id="fight-button"
+        ><a href="/fight" class="has-text-primary"> FIGHT!</a></button>
+      </div>
     </div>
 
-    <div class="greenWarrior-image">
-      <img
-        id="greenWarrior-image2"
-        src="not-found.png"
-        alt="placeholder image"
-        width="200"
-        height="200"
-      />
+    <div class="wrapper">
+      <div class="contain is-flex">
+        <div class="chartTitle">
+          <h4 class="statsProfile has-text-centered">STATS</h4>
+        </div>
+      </div>
     </div>
-  </section>
-
-  <section>
-    <div class="cthulhu-image">
-      <img
-        id="cthulhu-image2"
-        src="not-found.png"
-        alt="placeholder image"
-        width="200"
-        height="200"
-      />
-    </div>
-  </section>
+  </div>
 </div>
+
+<script src="./js/profile.js"></script>
