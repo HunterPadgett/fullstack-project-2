@@ -3,27 +3,28 @@ const { User, Fighter } = require('../../models');
 
 // api/fighter
 
-router.get('/', async (req, res) => {
-  // find all categories ✅
-  // be sure to include its associated Products ✅
-  try {
-    const fighterData = await Fighter.findOne({ where: { user_id: req.body.user_id } });
-    res.status(200).json(fighterData);
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
+// router.get('/', async (req, res) => {
+//   // find all categories ✅
+//   // be sure to include its associated Products ✅
+//   try {
+//     const fighterData = await Fighter.findOne({ where: { user_id: req.body.user_id } });
+//     res.status(200).json(fighterData);
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 
-router.get('/:id', async (req, res) => {
+router.get('/', async (req, res) => {
   // find one category by its `id` value ✅
   // be sure to include its associated Products ✅
   try {
-    const fighterData = await Fighter.findByPk(req.params.id, {
+    const fighterData = await Fighter.findOne({where: {user_id: req.session.id}}, {
       include: User
     });
-
-    if (!catData) {
-      res.status(404).json({ message: 'no fighter found with that id'});
+    const user = fighterData.get({ plain: true });
+    // console.log(user.Fighter.fighter_image);
+    if (!fighterData) {
+      res.status(404).json({ message: 'no fighter found'});
       return;
     }
 
