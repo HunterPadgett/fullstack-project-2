@@ -62,8 +62,6 @@ const tankyboiHandler = async (event) => {
 };
 
 document.getElementById('assassin').addEventListener('click', assassinHandler);
-document
-  .getElementById('allrounder')
-  .addEventListener('click', allrounderHandler);
+document.getElementById('allrounder').addEventListener('click', allrounderHandler);
 document.getElementById('tankyboi').addEventListener('click', tankyboiHandler);
 
