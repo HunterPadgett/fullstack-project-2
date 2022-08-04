@@ -140,7 +140,9 @@
   letter-spacing: 6px;
 }
 
+/*  */
 /* PROFILE STYLING */
+/*  */
 
 #bgImgProfile {
   max-height: 100vh;
@@ -152,29 +154,30 @@
   left: 0;
 }
 
+/*  */
 /* FIGHT PAGE STYLING */
+/*  */
 
-#bgImgFight {
-  max-height: 100vh;
-  min-width: 1024px;
-  width: 100%;
-  height: auto;
-  /* position: fixed; */
-  top: 0;
-  left: 0;
+.bgImgFight {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(/images/45908.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-#container {
-  backdrop-filter: blur(10px);
+#fightContainer {
+  /* backdrop-filter: blur(10px); */
 }
 
 #top {
   /* border: 1px solid; */
   /* border-color: red; */
-  justify-content: center;
+  /* justify-content: center; */
   /* padding-top: 8.3rem; */
   height: 55rem;
   /* align-items: baseline; */
+  /* backdrop-filter: blur(10px); */
 }
 
 #character {
@@ -306,12 +309,12 @@
   justify-content: center;
   text-decoration: none;
   position: fixed;
-  font-size: 27px;
+  font-size: 26px;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 60px;
+  height: 65px;
   width: 280px;
 }
 

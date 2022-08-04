@@ -1,16 +1,13 @@
 // global variables
-const topText = document.getElementById('topText');
 const stats = document.getElementsByClassName('stats');
-const charStats = document.getElementById('charStats');
 const charHP = document.getElementById('charHP');
 const bossHP = document.getElementById('bossHP');
 const startBtn = document.getElementById('floating-btn');
 const charImg = document.getElementById('charImg');
 const bossImg = document.getElementById('bossImg');
-const container = document.getElementById('container');
+const container = document.getElementById('fightContainer');
 const instructions = document.getElementById('instructions');
 const bossInstructions = document.getElementById('bossInstructions');
-const subtitle = document.getElementById('subtitle');
 const strongAttack = document.getElementById('strongAttackBtn');
 const charMoves = document.getElementById('charMoves');
 const title = document.getElementById('title');
@@ -18,6 +15,7 @@ const specAttack = document.getElementById('specAttackBtn');
 const preAttack = document.getElementById('preAttackBtn');
 const playAgainBtn = document.getElementById('playAgainBtn');
 const newCharBtn = document.getElementById('newCharBtn');
+const mainNavtitle = document.getElementById('mainNavTitle');
 
 // health bar variables
 let charHealthBar = 100;
@@ -31,12 +29,12 @@ function startFight() {
   }
   // displaying elements at the start of the fight
   startBtn.style.visibility = 'hidden';
+  mainNavtitle.innerHTML = 'Defeat Lord Cthulhu to Save the World!';
   charImg.style.opacity = '100%';
   bossImg.style.opacity = '100%';
   container.style.backdropFilter = 'none';
   instructions.innerHTML =
     'Choose your attacks and defense below to defeat Cthulhu';
-  subtitle.innerHTML = '';
 }
 
 async function bossAttacks() {
@@ -74,7 +72,9 @@ async function bossAttacks() {
     }
     // changing the title to display if user won. hiding attack buttons so user can no longer attack once someone's health bar reaches 0
     if (charHealthBar == 0) {
-      title.innerHTML = 'OH NO, GAME OVER! LORD CTHULHU HAS DEFEATED YOU!';
+      mainNavtitle.innerHTML =
+          'OH NO, GAME OVER! LORD CTHULHU HAS DEFEATED YOU!';
+      mainNavtitle.style.fontSize = '42px';
       strongAttack.style.visibility = 'hidden';
       preAttack.style.visibility = 'hidden';
       specAttack.style.visibility = 'hidden';
@@ -116,7 +116,9 @@ async function bossAttacks() {
     }
     // changing the title to display if user won. hiding attack buttons so user can no longer attack once someone's health bar reaches 0
     if (charHealthBar == 0) {
-      title.innerHTML = 'OH NO, GAME OVER! LORD CTHULHU HAS DEFEATED YOU!';
+      mainNavtitle.innerHTML =
+          'OH NO, GAME OVER! LORD CTHULHU HAS DEFEATED YOU!';
+      mainNavtitle.style.fontSize = '42px';
       strongAttack.style.visibility = 'hidden';
       preAttack.style.visibility = 'hidden';
       specAttack.style.visibility = 'hidden';
@@ -158,7 +160,9 @@ async function bossAttacks() {
     }
     // changing the title to display if user won. hiding attack buttons so user can no longer attack once someone's health bar reaches 0
     if (charHealthBar == 0) {
-      title.innerHTML = 'OH NO, GAME OVER! LORD CTHULHU HAS DEFEATED YOU!';
+      mainNavtitle.innerHTML =
+          'OH NO, GAME OVER! LORD CTHULHU HAS DEFEATED YOU!';
+      mainNavtitle.style.fontSize = '42px';
       strongAttack.style.visibility = 'hidden';
       preAttack.style.visibility = 'hidden';
       specAttack.style.visibility = 'hidden';
@@ -199,7 +203,8 @@ async function sAttack() {
 
   // changing the title to display if user won. hiding attack buttons so user can no longer attack once someone's health bar reaches 0
   if (bossHealthBar == 0) {
-    title.innerHTML = 'YOU WIN! YOU HAVE DEFEATED LORD CTHULHU!';
+    mainNavtitle.innerHTML = 'YOU WIN! YOU HAVE DEFEATED LORD CTHULHU!';
+    mainNavtitle.style.fontSize = '42px';
     strongAttack.style.visibility = 'hidden';
     preAttack.style.visibility = 'hidden';
     specAttack.style.visibility = 'hidden';
@@ -238,7 +243,8 @@ async function pAttack() {
 
   // changing the title to display if user won. hiding attack buttons so user can no longer attack once someone's health bar reaches 0
   if (bossHealthBar == 0) {
-    title.innerHTML = 'YOU WIN! YOU HAVE DEFEATED LORD CTHULHU!';
+    mainNavtitle.innerHTML = 'YOU WIN! YOU HAVE DEFEATED LORD CTHULHU!';
+    mainNavtitle.style.fontSize = '42px';
     strongAttack.style.visibility = 'hidden';
     preAttack.style.visibility = 'hidden';
     specAttack.style.visibility = 'hidden';
@@ -277,7 +283,8 @@ async function speAttack() {
 
   // changing the title to display if user won. hiding attack buttons so user can no longer attack once someone's health bar reaches 0
   if (bossHealthBar == 0) {
-    title.innerHTML = 'YOU WIN! YOU HAVE DEFEATED LORD CTHULHU!';
+    mainNavtitle.innerHTML = 'YOU WIN! YOU HAVE DEFEATED LORD CTHULHU!';
+    mainNavtitle.style.fontSize = '42px';
     strongAttack.style.visibility = 'hidden';
     preAttack.style.visibility = 'hidden';
     specAttack.style.visibility = 'hidden';
@@ -298,7 +305,7 @@ function playAgain() {
   bossHP.style.width = `${newBossHealthBar}px`;
   let newCharHealthBar = (charHealthBar / 100) * 244;
   charHP.style.width = `${newCharHealthBar}px`;
-  title.innerHTML = 'Defeat Lord Cthulhu to Save the World!';
+  mainNavtitle.innerHTML = 'Defeat Lord Cthulhu to Save the World!';
   bossImg.style.transform = 'rotate(0deg)';
   playAgainBtn.style.visibility = 'hidden';
   newCharBtn.style.visibility = 'hidden';
