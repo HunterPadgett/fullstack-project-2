@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Fighter, Style } = require('../models');
+const { User, Fighter,} = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', (req, res) => {
@@ -49,7 +49,7 @@ router.get('/profile', withAuth, async (req, res) => {
 
 router.get('/home', async (req, res) => {
   try {
-    res.render('home')
+    res.render('home');
   } catch (err) {
     res.status(500).json(err);
   }
