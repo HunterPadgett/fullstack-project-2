@@ -1,12 +1,39 @@
 <img id="bgImgProfile" src="/images/45908.jpg" alt="space" />
 
+<div id="" class="container is-centered">
+  <br />
+  <br />
+  <div
+    class="columns has-background-dark is-flex is-justify-content-space-between has-text-light is-align-content-center is-flex-wrap-wrap"
+  >
+
+    <div
+      class="column has-text-centered has-background-dark has-text-light p-2"
+    >
+      <p class="has-text-light" id="charNamePro">{{username}}</p>
+    </div>
+
+    <div class="column has-background-dark">
+      <div class="style-fight-button">
+        <p class="is-primary">WINS</p>
+      </div>
+    </div>
+
+    <div class="column has-background-dark">
+      <div class="style-fight-button">
+        <p class="is-primary">LOSES</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 <div id="proContain" class="container is-centered">
 
   <div
     class="has-background-dark is-flex is-justify-content-space-between has-text-light is-align-content-center is-flex-wrap-wrap"
   >
     <div class="has-text-centered has-background-dark p-2">
-      <p id="charNamePro">{{fighter.fighter_name}}</p>
       <img id="charImgPro" src="{{fighter.fighter_image}}" alt="" />
     </div>
 
