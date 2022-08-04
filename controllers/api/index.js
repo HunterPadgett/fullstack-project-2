@@ -8,4 +8,5 @@ router.use('/users', userRoutes);
 router.use('/fighter', fighterRoutes);
 router.use('/style', styleRoutes);
 
+
 module.exports = router;

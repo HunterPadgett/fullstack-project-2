@@ -33,8 +33,11 @@ router.get('/charSelect', withAuth, async (req, res) => {
 router.get('/profile', withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
-    const userData = await User.findByPk(req.session.user_id);
+    const userData = await User.findByPk(req.session.user_id, {
+      include: Fighter
+    });
     const user = userData.get({ plain: true });
+    console.log(user);
     res.render('profile', {
       ...user,
       logged_in: true

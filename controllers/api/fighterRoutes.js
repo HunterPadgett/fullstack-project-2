@@ -19,7 +19,7 @@ router.get('/:id', async (req, res) => {
   // be sure to include its associated Products ✅
   try {
     const fighterData = await Fighter.findByPk(req.params.id, {
-      include: Product
+      include: User
     });
 
     if (!catData) {
@@ -35,10 +35,17 @@ router.get('/:id', async (req, res) => {
 
 router.post('/', async (req, res) => {
   // create a new category
+  console.log(req.body);
   try {
-    const fighterData = await Fighter.create(req.body);
+    let tempObj = {
+      fighter_image: req.body.fighter_image,
+      fighter_name: req.body.fighter_name,
+      user_id: req.session.user_id
+    };
+    const fighterData = await Fighter.create(tempObj);
     res.status(200).json(fighterData);
   } catch (err) {
+    console.log(err);
     res.status(500).json(err);
   }
 });
