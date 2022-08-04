@@ -34,9 +34,14 @@ is the perfect way to kill some time.  You get to make your own personal account
 
   Once dependencies are installed and the database has been populated run ```node server.js``` to start the server.
 
-  ## How to Contribute
+  ## Contribution
 
-  Not currently accepting contributions on this project.
+  The contributers for this project are:
+  - [Hunter Padgett](https://github.com/HunterPadgett)
+  - [Will Summerlin](https://github.com/dubsumm)
+  - [Dominic Fisher](https://github.com/DominicFisher18)
+  - 
+  [Gabriel Fonseca](https://github.com/gabefando)
 
   ## Tests
 
