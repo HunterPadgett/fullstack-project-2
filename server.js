@@ -16,13 +16,13 @@ const sess = {
   secret: 'Super secret secret',
   cookie: {
     // 20 mins
-    maxAge: 1200000,
+    maxAge: 1200000
   },
   resave: false,
   saveUninitialized: true,
   store: new SequelizeStore({
-    db: sequelize,
-  }),
+    db: sequelize
+  })
 };
 
 app.use(session(sess));
@@ -38,7 +38,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);
 
-sequelize.sync({ force: true}).then(() => {
+sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () =>
-    console.log(`\n listening on: http://localhost:${PORT}`));
+    console.log(`\n listening on: http://loccalhost:${PORT}`)
+  );
 });
