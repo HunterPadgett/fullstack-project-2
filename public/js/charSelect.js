@@ -1,12 +1,13 @@
 const assassinHandler = async (event) => {
   event.preventDefault();
   const fighter_image = '/images/pika.png';
+  const fighter_source ='./js/pikaFight.js'
   const fighter_name = document.getElementById('charNameInput').value.trim();
   console.log(`${fighter_name} ${fighter_image}`);
   if (fighter_name) {
     const response = await fetch('/api/fighter', {
       method: 'POST',
-      body: JSON.stringify({ fighter_image, fighter_name }),
+      body: JSON.stringify({ fighter_image, fighter_name, fighter_source }),
       headers: { 'Content-Type': 'application/json' }
     });
 
@@ -22,13 +23,14 @@ const assassinHandler = async (event) => {
 const allrounderHandler = async (event) => {
   event.preventDefault();
   const fighter_image = '/images/mario.png';
+  const fighter_source ='./js/plumberFight.js'
   const fighter_name = document.getElementById('charNameInput').value.trim();
   await console.log(fighter_image);
 
   if (fighter_name) {
     const response = await fetch('/api/fighter', {
       method: 'POST',
-      body: JSON.stringify({ fighter_image, fighter_name }),
+      body: JSON.stringify({ fighter_image, fighter_name, fighter_source }),
       headers: { 'Content-Type': 'application/json' }
     });
 
@@ -42,13 +44,14 @@ const allrounderHandler = async (event) => {
 };
 const tankyboiHandler = async (event) => {
   event.preventDefault();
+  const fighter_source ='./js/greenWarFight.js'
   const fighter_image = '/images/link.png';
   const fighter_name = document.getElementById('charNameInput').value.trim();
   // console.log(`${fighter_name} ${fighter_image}`);
   if (fighter_name) {
     const response = await fetch('/api/fighter', {
       method: 'POST',
-      body: JSON.stringify({ fighter_image, fighter_name }),
+      body: JSON.stringify({ fighter_image, fighter_name, fighter_source }),
       headers: { 'Content-Type': 'application/json' }
     });
 
