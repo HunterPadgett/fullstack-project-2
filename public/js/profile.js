@@ -12,9 +12,9 @@ if (imgEl === '/images/pika.png') {
           label: '# of Votes',
           data: [40, 30, 30],
           backgroundColor: [
-            'rgba(255, 99, 132, 0.2)',
-            'rgba(54, 162, 235, 0.2)',
-            'rgba(255, 206, 86, 0.2)'
+            'rgba(255, 99, 132)',
+            'rgba(54, 162, 235)',
+            'rgba(255, 206, 86)'
           ],
           borderColor: 'white',
 
@@ -37,12 +37,12 @@ if (imgEl === '/images/pika.png') {
       labels: ['Attack', 'Strength', 'Defense'],
       datasets: [
         {
-          label: '# of Votes',
+          // label: '# of Votes',
           data: [30, 30, 40],
           backgroundColor: [
-            'rgba(255, 99, 132, 0.2)',
-            'rgba(54, 162, 235, 0.2)',
-            'rgba(255, 206, 86, 0.2)'
+            'rgba(255, 99, 132)',
+            'rgba(54, 162, 235)',
+            'rgba(255, 206, 86)'
           ],
           borderColor: 'white',
 
@@ -68,9 +68,9 @@ if (imgEl === '/images/pika.png') {
           label: '# of Votes',
           data: [33, 33, 33],
           backgroundColor: [
-            'rgba(255, 99, 132, 0.2)',
-            'rgba(54, 162, 235, 0.2)',
-            'rgba(255, 206, 86, 0.2)'
+            'rgba(255, 99, 132)',
+            'rgba(54, 162, 235)',
+            'rgba(255, 206, 86)'
           ],
           borderColor: 'white',
 

@@ -12,14 +12,63 @@
   position: fixed;
   top: 0;
   left: 0;
+  overflow: hidden;
 }
 
 #spaceBossHome {
   position: absolute;
-  top: 65%;
-  left: 50%;
+  top: 35%;
+  left: 35%;
   transform: translate(-50%, -50%);
   height: 600px;
+}
+
+@keyframes slide {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-1500px, 0, 0);
+  }
+}
+
+#bgImgHome {
+  max-height: 100vh;
+  min-width: 3500px;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  animation: slide 15s linear infinite;
+}
+
+#spaceBossHome {
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  height: 600px;
+}
+#spaceBossHome {
+  animation-name: bounce-4;
+  animation-timing-function: ease;
+}
+@keyframes bounce-4 {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    transform: scale(1.1, 0.9) translateY(0);
+  }
+  30% {
+    transform: scale(0.9, 1.1) translateY(-100px);
+  }
+  50% {
+    transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
 }
 
 @media (max-width: 1265px) {
@@ -229,7 +278,34 @@
 }
 
 #charImgPro {
-  max-height: 200px;
+  height: 190px;
+}
+
+#charImgPro {
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  height: 190px;
+}
+#charImgPro {
+  animation-name: bounce-4;
+  animation-timing-function: ease;
+}
+@keyframes bounce-4 {
+  0% {
+    transform: scale(0.7, 0.7) translateY(50px);
+  }
+  10% {
+    transform: scale(0.9, 0.7) translateY(-50px);
+  }
+  30% {
+    transform: scale(0.9, 0.9) translateX(150px);
+  }
+  50% {
+    transform: scale(0.6, 0.6) translateY(0);
+  }
+  100% {
+    transform: scale(0.6, 0.6) translateY(0);
+  }
 }
 
 #winLoss {
@@ -277,12 +353,12 @@
   justify-content: center;
   text-decoration: none;
   font-size: 26px;
-  /* position: relative;
+  position: relative;
   font-size: 26px;
   position: fixed;
-  top: 43%;
+  top: 60%;
   left: 50%;
-  transform: translate(-50%, -50%); */
+  transform: translate(-50%, -50%);
   height: 65px;
   width: 180px;
 }
@@ -296,7 +372,6 @@
   height: 60px;
   width: 200px;
   letter-spacing: 8px;
-  backdrop-filter: blur(50px);
   box-shadow: 2px 4px 3px rgba(0, 0, 0, 0.8);
 }
 
