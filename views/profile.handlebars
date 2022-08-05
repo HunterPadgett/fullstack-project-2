@@ -3,6 +3,12 @@
 <div id="" class="container is-centered">
   <br />
   <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
   <div
     class="columns has-background-dark is-flex is-justify-content-space-between has-text-light is-align-content-center is-flex-wrap-wrap"
   >
@@ -10,26 +16,17 @@
     <div
       class="column has-text-centered has-background-dark has-text-light p-2"
     >
-      <p class="has-text-light" id="charNamePro">{{username}}</p>
-    </div>
-
-    <div class="column has-background-dark">
-      <div class="style-fight-button">
-        <p  class="is-primary">WINS: {{wins}}</p>
-      </div>
-    </div>
-
-    <div class="column has-background-dark">
-      <div class="style-fight-button">
-        <p class="is-primary">LOSSES: {{losses}}</p>
-      </div>
+      <p class="has-text-light" id="charNamePro">{{username}}
+        and your champion
+        {{fighter.fighter_name}}</p>
     </div>
 
   </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
-    
+<script
+  src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"
+></script>
 
 <div id="proContain" class="container is-centered">
 
@@ -37,6 +34,8 @@
     class="has-background-dark is-flex is-justify-content-space-between has-text-light is-align-content-center is-flex-wrap-wrap"
   >
     <div class="has-text-centered has-background-dark p-2">
+      <br />
+      <br />
       <img id="charImgPro" src="{{fighter.fighter_image}}" alt="" />
     </div>
 
@@ -45,7 +44,8 @@
         <button
           class="floating-btn-profile has-text-primary"
           id="fight-button"
-        ><a href="/fight" class="has-text-primary" id="choose-fighter"> FIGHT!</a></button>
+        ><a href="/fight" class="has-text-primary" id="choose-fighter">
+            FIGHT!</a></button>
       </div>
     </div>
 
