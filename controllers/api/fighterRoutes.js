@@ -25,6 +25,7 @@ router.post('/', async (req, res) => {
     let tempObj = {
       fighter_image: req.body.fighter_image,
       fighter_name: req.body.fighter_name,
+      fighter_source: req.body.fighter_source,
       user_id: req.session.user_id
     };
     const fighterData = await Fighter.create(tempObj);

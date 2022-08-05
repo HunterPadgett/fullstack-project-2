@@ -18,6 +18,10 @@ Fighter.init(
       type: DataTypes.STRING,
       allowNull: false
     },
+    fighter_source: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
