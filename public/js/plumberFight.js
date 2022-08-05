@@ -21,6 +21,22 @@ const mainNavtitle = document.getElementById('mainNavTitle');
 let charHealthBar = 100;
 let bossHealthBar = 100;
 
+// async function victory(win) {
+//   const score = await fetch('api/users', {
+//     method: 'GET'
+//   });
+//   if (win) {
+//     score.wins++;
+//   } else {
+//     score.losses++;
+//   }
+//   await fetch('api/users', {
+//     method: 'PUT',
+//     body: JSON.stringify({ score }),
+//     headers: { 'Content-Type': 'application/json' }
+//   });
+// }
+
 // function to display the start of the fight
 function startFight() {
   // loops thru the .stats class array to display the health bars & attack menu

@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { User } = require('../../models');
+const withAuth = require('../../utils/auth');
 
 // Create new user with /api/user
 router.post('/', async (req, res) => {
@@ -18,7 +19,9 @@ router.post('/', async (req, res) => {
 
 router.post('/login', async (req, res) => {
   try {
-    const userData = await User.findOne({ where: { username: req.body.username }});
+    const userData = await User.findOne({
+      where: { username: req.body.username }
+    });
 
     if (!userData) {
       res
@@ -57,25 +60,23 @@ router.post('/logout', (req, res) => {
   }
 });
 
-// /api/user/userInfo/:id for showing a specific user in insomnia
-router.get('/userInfo/:id', async (req, res) => {
-  try {
-    const UserInfo = await User.findByPk(req.params.id);
+router.get('/', async (req, res) => {
+  const userData = await User.findByPk(req.session.user_id);
 
-    res.status(200).json(UserInfo);
-    console.log(req.session.logged_in);
+  res.json(userData);
+});
+
+router.put('/', async (req, res) => {
+  try {
+    await User.update(req.body, {
+      where: {
+        id: req.session.user_id
+      }
+    });
   } catch (err) {
+    console.log(err);
     res.status(500).json(err);
   }
 });
 
-router.get('/userInfo', async (req, res) => {
-  try {
-    const UserInfo = await User.findAll(req.body);
-
-    res.status(200).json(UserInfo);
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
 module.exports = router;
