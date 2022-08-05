@@ -45,7 +45,7 @@
 }
 
 #spaceBossHome {
-  animation-duration: 3s;
+  animation-duration: 1.25s;
   animation-iteration-count: infinite;
   height: 600px;
 }
