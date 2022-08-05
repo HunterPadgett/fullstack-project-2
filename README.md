@@ -15,16 +15,18 @@ https://lit-crag-19257.herokuapp.com/
 
   - [Installation](#installation)
   - [Usage](#usage)
-  - [How to Contribute](#how_to_contribute)
+  - [Contribution](#Contribution)
   - [Tests](#tests)
   - [Questions](#questions)
+  - [Screenshots and Attribution](#Screenshots_and_Attribution)
   - [License](#license)
+  
   
   ## Installation
 
   If cloning locally...
   
-  Open the ```db``` folder in VSCode's integrated terminal.
+  Set up your ```.env file``` and open the ```db``` folder in VSCode's integrated terminal.
 
   Run ```mysql -u root -p``` this will prompt you to enter your MySQL password. Once your password has been entered run ```SOURCE schema.sql;``` then run ```USE projectTwo_db;``` then run ```exit``` then ```cd ..``` to return to the root level.
 
@@ -40,8 +42,7 @@ https://lit-crag-19257.herokuapp.com/
   - [Hunter Padgett](https://github.com/HunterPadgett)
   - [Will Summerlin](https://github.com/dubsumm)
   - [Dominic Fisher](https://github.com/DominicFisher18)
-  - 
-  [Gabriel Fonseca](https://github.com/gabefando)
+  - [Gabriel Fonseca](https://github.com/gabefando)
 
   ## Tests
 
@@ -53,18 +54,29 @@ https://lit-crag-19257.herokuapp.com/
 
   Feel free to check out my other projects at [hunterpadgett](https://www.github.com/hunterpadgett).
 
+  ## Screenshots and Attribution
+
+  8-bit characters created with:<br>
+  https://make8bitart.com/
+
+  Background Images: <br>
+  <a href='https://www.freepik.com/vectors/background'>Background vector created by pikisuperstar - www.freepik.com</a><br>
+  <a href='https://www.freepik.com/vectors/pixel-game'>Pixel game vector created by stockgiu - www.freepik.com</a><br>
+  <a href='https://www.freepik.com/vectors/arcade-game'>Arcade game vector created by macrovector - www.freepik.com</a><br>
+
+  YouTube Tutorial that gave us inspiration for the fight sequence:<br>
+  <a href='https://www.youtube.com/watch?v=sr8bJKSUYwE'>YouTube video by Scott Blenkhorne - https://www.youtube.com/user/primustimus</a>
+
+  ![Home Screen](./public/images/HomeScreen.png "Home Screen")
+  ![Login Screen](./public/images/LoginScreen.png "Login Screen")
+  ![Character Select Screen](./public/images/CharacterSelect.png "Character Select Screen")
+  ![Profile Screen](./public/images/ProfileScreen.png "Profile Screen")
+  ![Start Fight screen](./public/images/StartFight.png "Start Fight Screen")
+  ![Fight Screen](./public/images/FightScreen.png "Fight Screen")
+  ![Victory Screen](./public/images/VictoryScreen.png "Victory Screen")
+
   ## License
       
   This project is licensed under MIT.
 
   https://opensource.org/licenses/MIT
-
-## Screenshots
-
-![Home Screen](./public/images/HomeScreen.png "Home Screen")
-![Login Screen](./public/images/LoginScreen.png "Login Screen")
-![Character Select Screen](./public/images/CharacterSelect.png "Character Select Screen")
-![Profile Screen](./public/images/ProfileScreen.png "Profile Screen")
-![Start Fight screen](./public/images/StartFight.png "Start Fight Screen")
-![Fight Screen](./public/images/FightScreen.png "Fight Screen")
-![Victory Screen](./public/images/VictoryScreen.png "Victory Screen")
