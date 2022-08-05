@@ -73,4 +73,11 @@
 ><a class="has-text-primary" href="charSelect">
     SELECT NEW CHARACTER</a></button>
 
+{{#if fighter.fighter_image === /images/mario.png}}
 <script src="./js/plumberFight.js"></script>
+{{else}} {{#if fighter.fighter_image === /images/pika.png}}
+<script src="./js/pikaFight.js"></script>
+{{else}}
+<script src="./js/greenWarFight.js"></script>
+{{/if}}
+{{/if}}

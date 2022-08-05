@@ -60,4 +60,23 @@ router.post('/logout', (req, res) => {
   }
 });
 
+router.get('/', async (req, res) => {
+  const userData = await User.findByPk(req.session.user_id);
+
+  res.json(userData);
+});
+
+router.put('/', async (req, res) => {
+  try {
+    await User.update(req.body, {
+      where: {
+        id: req.session.user_id
+      }
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
 module.exports = router;
