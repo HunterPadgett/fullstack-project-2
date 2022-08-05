@@ -9,7 +9,7 @@ const instructions = document.getElementById('instructions');
 const bossInstructions = document.getElementById('bossInstructions');
 const strongAttack = document.getElementById('strongAttackBtn');
 const charMoves = document.getElementById('charMoves');
-const title = document.getElementById('title');
+// const title = document.getElementById('title');
 const specAttack = document.getElementById('specAttackBtn');
 const preAttack = document.getElementById('preAttackBtn');
 const playAgainBtn = document.getElementById('playAgainBtn');
@@ -32,8 +32,7 @@ function startFight() {
   charImg.style.opacity = '100%';
   bossImg.style.opacity = '100%';
   container.style.backdropFilter = 'none';
-  instructions.innerHTML =
-    'Choose your attacks and defense below to defeat Cthulhu';
+  instructions.innerHTML = 'Choose your attacks below to defeat Cthulhu';
 }
 
 async function bossAttacks() {
@@ -55,7 +54,8 @@ async function bossAttacks() {
         charHealthBar = 0;
       }
       // display to user how much damage they dealt
-      bossInstructions.innerHTML = `Lord Cthulhu hit you with his dark mage lob for ${dmg} damage! You now have ${charHealthBar} hp remaining.`;
+      bossInstructions.innerHTML =
+          'Lord Cthulhu hit you with his dark mage lob!';
       // health bar subtracts relative to width of original health bars pixels
       let newCharHealthBar = (charHealthBar / 110) * 244;
       charHP.style.width = `${newCharHealthBar}px`;
@@ -99,7 +99,8 @@ async function bossAttacks() {
         charHealthBar = 0;
       }
       // display to user how much damage they dealt
-      bossInstructions.innerHTML = `Lord Cthulhu hit you with his cosmic smash for ${dmg} damage! You now have ${charHealthBar} hp remaining.`;
+      bossInstructions.innerHTML =
+          'Lord Cthulhu hit you with his cosmic smash!';
       // health bar subtracts relative to width of original health bars pixels
       let newCharHealthBar = (charHealthBar / 110) * 244;
       charHP.style.width = `${newCharHealthBar}px`;
@@ -143,7 +144,8 @@ async function bossAttacks() {
         charHealthBar = 0;
       }
       // display to user how much damage they dealt
-      bossInstructions.innerHTML = `Big Yikes! Lord Cthulhu hit you with his world crusher for ${dmg} damage! You now have ${charHealthBar} hp remaining.`;
+      bossInstructions.innerHTML =
+          'Big Yikes! Lord Cthulhu hit you with his world crusher!';
       // health bar subtracts relative to width of original health bars pixels
       let newCharHealthBar = (charHealthBar / 110) * 244;
       charHP.style.width = `${newCharHealthBar}px`;
@@ -212,6 +214,7 @@ async function sAttack() {
     playAgainBtn.style.visibility = 'visible';
     newCharBtn.style.visibility = 'visible';
     bossImg.style.transform = 'rotate(90deg)';
+    charImg.setAttribute('id', 'winImg');
   } else {
     await bossAttacks();
   }
@@ -252,6 +255,7 @@ async function pAttack() {
     playAgainBtn.style.visibility = 'visible';
     newCharBtn.style.visibility = 'visible';
     bossImg.style.transform = 'rotate(90deg)';
+    charImg.setAttribute('id', 'winImg');
   } else {
     await bossAttacks();
   }
@@ -293,6 +297,7 @@ async function speAttack() {
     playAgainBtn.style.visibility = 'visible';
     newCharBtn.style.visibility = 'visible';
     bossImg.style.transform = 'rotate(90deg)';
+    charImg.setAttribute('id', 'winImg');
   } else {
     await bossAttacks();
   }
