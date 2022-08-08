@@ -66,17 +66,20 @@ router.get('/', async (req, res) => {
   res.json(userData);
 });
 
-router.put('/', async (req, res) => {
-  try {
-    await User.update(req.body, {
-      where: {
-        id: req.session.user_id
-      }
-    });
-  } catch (err) {
-    console.log(err);
-    res.status(500).json(err);
-  }
-});
+// router.put('/', async (req, res) => {
+//   try {
+//     //win is placeholder el
+//     const userData = await User.findByPk(req.session.user_id);
+//     if(req.body.win) {
+//       let wins = userData.wins;
+//       wins++;
+//       const userWinUpdate = await User.update({wins}, {where: {id: req.session.user_id}})
+//     }
+//   await User.update(req.body, {where: {id: req.session.user_id }});
+//   } catch (err) {
+//     console.log(err);
+//     res.status(500).json(err);
+//   }
+// });
 
 module.exports = router;
