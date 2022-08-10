@@ -35,6 +35,26 @@ function startFight() {
   instructions.innerHTML = 'Choose your attacks below to defeat Cthulhu';
 }
 
+async function updateWinsAndLosses(gameOutcome) {
+  if (gameOutcome === 'win') {
+    const response = await fetch('/api/users', {
+      method: 'PUT',
+      body: JSON.stringify({ win: true }),
+      headers: { 'Content-Type': 'application/json' }
+    });
+
+    !response.ok && alert('error storing win');
+  } else {
+    const response = await fetch('/api/users', {
+      method: 'PUT',
+      body: JSON.stringify({ lose: true }),
+      headers: { 'Content-Type': 'application/json' }
+    });
+
+    !response.ok && alert('error storing loss');
+  }
+}
+
 async function bossAttacks() {
   // assigning the boss a random attack based off of 3 choices...
   let bossMoves = Math.ceil(Math.random() * 3);
@@ -71,6 +91,8 @@ async function bossAttacks() {
     }
     // changing the title to display if user won. hiding attack buttons so user can no longer attack once someone's health bar reaches 0
     if (charHealthBar === 0) {
+      updateWinsAndLosses('lose');
+
       mainNavtitle.innerHTML =
           'OH NO, GAME OVER! LORD CTHULHU HAS DEFEATED YOU!';
       mainNavtitle.style.fontSize = '42px';
@@ -116,6 +138,8 @@ async function bossAttacks() {
     }
     // changing the title to display if user won. hiding attack buttons so user can no longer attack once someone's health bar reaches 0
     if (charHealthBar === 0) {
+      updateWinsAndLosses('lose');
+
       mainNavtitle.innerHTML =
           'OH NO, GAME OVER! LORD CTHULHU HAS DEFEATED YOU!';
       mainNavtitle.style.fontSize = '42px';
@@ -161,6 +185,8 @@ async function bossAttacks() {
     }
     // changing the title to display if user won. hiding attack buttons so user can no longer attack once someone's health bar reaches 0
     if (charHealthBar === 0) {
+      updateWinsAndLosses('lose');
+
       mainNavtitle.innerHTML =
           'OH NO, GAME OVER! LORD CTHULHU HAS DEFEATED YOU!';
       mainNavtitle.style.fontSize = '42px';
@@ -193,7 +219,7 @@ async function sAttack() {
       bossHealthBar = 0;
     }
     // display to user how much damage they dealt
-    instructions.innerHTML = `You hit Lord Cthulhu with your quick attack for ${dmg} damage! He now has ${bossHealthBar} hp remaining.`;
+    instructions.innerHTML = 'You hit Lord Cthulhu with your strong attack!';
     // health bar subtracts relative to width of original health bars pixels
     let newBossHealthBar = (bossHealthBar / 100) * 244;
     bossHP.style.width = `${newBossHealthBar}px`;
@@ -204,6 +230,8 @@ async function sAttack() {
 
   // changing the title to display if user won. hiding attack buttons so user can no longer attack once someone's health bar reaches 0
   if (bossHealthBar === 0) {
+    updateWinsAndLosses('win');
+
     mainNavtitle.innerHTML = 'YOU WIN! YOU HAVE DEFEATED LORD CTHULHU!';
     mainNavtitle.style.fontSize = '42px';
     strongAttack.style.visibility = 'hidden';
@@ -234,7 +262,7 @@ async function pAttack() {
       bossHealthBar = 0;
     }
     // display to user how much damage they dealt
-    instructions.innerHTML = `You hit Lord Cthulhu with your precision attack for ${dmg} damage! He now has ${bossHealthBar} hp remaining.`;
+    instructions.innerHTML = 'You hit Lord Cthulhu with your precision attack!';
     // health bar subtracts relative to width of original health bars pixels
     let newBossHealthBar = (bossHealthBar / 100) * 244;
     bossHP.style.width = `${newBossHealthBar}px`;
@@ -245,6 +273,8 @@ async function pAttack() {
 
   // changing the title to display if user won. hiding attack buttons so user can no longer attack once someone's health bar reaches 0
   if (bossHealthBar === 0) {
+    updateWinsAndLosses('win');
+
     mainNavtitle.innerHTML = 'YOU WIN! YOU HAVE DEFEATED LORD CTHULHU!';
     mainNavtitle.style.fontSize = '42px';
     strongAttack.style.visibility = 'hidden';
@@ -275,7 +305,7 @@ async function speAttack() {
       bossHealthBar = 0;
     }
     // display to user how much damage they dealt
-    instructions.innerHTML = `You hit Lord Cthulhu with your special attack for ${dmg} damage! He now has ${bossHealthBar} hp remaining.`;
+    instructions.innerHTML = 'You hit Lord Cthulhu with your special attack!';
     // health bar subtracts relative to width of original health bars pixels
     let newBossHealthBar = (bossHealthBar / 100) * 244;
     bossHP.style.width = `${newBossHealthBar}px`;
@@ -286,6 +316,8 @@ async function speAttack() {
 
   // changing the title to display if user won. hiding attack buttons so user can no longer attack once someone's health bar reaches 0
   if (bossHealthBar === 0) {
+    updateWinsAndLosses('win');
+
     console.log('dub');
     mainNavtitle.innerHTML = 'YOU WIN! YOU HAVE DEFEATED LORD CTHULHU!';
     mainNavtitle.style.fontSize = '42px';

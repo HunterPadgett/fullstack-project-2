@@ -312,8 +312,12 @@
 #winLoss {
 }
 
+#winContain {
+  padding-top: 5rem;
+}
+
 #proContain {
-  padding-top: 3rem;
+  padding-top: 5rem;
 }
 
 #charNamePro {
@@ -349,7 +353,7 @@
   position: relative;
   font-size: 26px;
   position: fixed;
-  top: 60%;
+  top: 65%;
   left: 50%;
   transform: translate(-50%, -50%);
   height: 65px;

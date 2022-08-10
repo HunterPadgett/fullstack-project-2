@@ -1,40 +1,40 @@
-const imgEl = document.getElementById("charImgPro").getAttribute("src");
+const imgEl = document.getElementById('charImgPro').getAttribute('src');
 console.log(imgEl);
-let ctx = document.getElementById("myChart").getContext("2d");
+let ctx = document.getElementById('myChart').getContext('2d');
 
-if (imgEl === "/images/pika.png") {
+if (imgEl === '/images/pika.png') {
   const myChart = new Chart(ctx, {
-    type: "doughnut",
+    type: 'doughnut',
     data: {
-      labels: ["Attack", "Strength", "Defense"],
+      labels: ['Attack', 'Strength', 'Defense'],
       datasets: [
         {
-          label: "# of Votes",
+          label: '# of Votes',
           data: [40, 30, 30],
           backgroundColor: [
             'rgba(255, 99, 132)',
             'rgba(54, 162, 235)',
             'rgba(255, 206, 86)'
           ],
-          borderColor: "white",
+          borderColor: 'white',
 
-          borderWidth: 1,
-        },
-      ],
+          borderWidth: 1
+        }
+      ]
     },
     options: {
       scales: {
         y: {
-          beginAtZero: true,
-        },
-      },
-    },
+          beginAtZero: true
+        }
+      }
+    }
   });
-} else if (imgEl === "/images/link.png") {
+} else if (imgEl === '/images/link.png') {
   const myChart = new Chart(ctx, {
-    type: "doughnut",
+    type: 'doughnut',
     data: {
-      labels: ["Attack", "Strength", "Defense"],
+      labels: ['Attack', 'Strength', 'Defense'],
       datasets: [
         {
           // label: '# of Votes',
@@ -44,47 +44,47 @@ if (imgEl === "/images/pika.png") {
             'rgba(54, 162, 235)',
             'rgba(255, 206, 86)'
           ],
-          borderColor: "white",
+          borderColor: 'white',
 
-          borderWidth: 1,
-        },
-      ],
+          borderWidth: 1
+        }
+      ]
     },
     options: {
       scales: {
         y: {
-          beginAtZero: true,
-        },
-      },
-    },
+          beginAtZero: true
+        }
+      }
+    }
   });
-} else if (imgEl === "/images/mario.png") {
+} else if (imgEl === '/images/mario.png') {
   const myChart = new Chart(ctx, {
-    type: "doughnut",
+    type: 'doughnut',
     data: {
-      labels: ["Attack", "Strength", "Defense"],
+      labels: ['Attack', 'Strength', 'Defense'],
       datasets: [
         {
-          label: "# of Votes",
+          label: '# of Votes',
           data: [33, 33, 33],
           backgroundColor: [
             'rgba(255, 99, 132)',
             'rgba(54, 162, 235)',
             'rgba(255, 206, 86)'
           ],
-          borderColor: "white",
+          borderColor: 'white',
 
-          borderWidth: 1,
-        },
-      ],
+          borderWidth: 1
+        }
+      ]
     },
     options: {
       scales: {
         y: {
-          beginAtZero: true,
-        },
-      },
-    },
+          beginAtZero: true
+        }
+      }
+    }
   });
 }
 // const fightsource = () => {
